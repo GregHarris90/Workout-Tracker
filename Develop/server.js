@@ -16,8 +16,8 @@ app.use(express.json());
 // Serve public folder
 app.use(express.static('public'));
 
-// Connect to mongodb at fitness
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness", {
+// Connect to mongodb at workout
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
     useNewUrlParser: true,
     useFindAndModify: false
 });
