@@ -13,7 +13,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// call morgan middleware???
+// Call morgan middleware???
 app.use(morgan('dev'));
 
 // Serve public folder
@@ -26,7 +26,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
 });
 
 // Routes
-app.use(require());
+app.use(require('./routes/api-route.js'));
+app.use(require('./routes/html-route.js'));
 
 // Listen to PORT 3000
 app.listen(PORT, () => {
