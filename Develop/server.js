@@ -13,7 +13,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// call morgan middleware?
+// call morgan middleware???
+app.use(morgan('dev'));
 
 // Serve public folder
 app.use(express.static('public'));
