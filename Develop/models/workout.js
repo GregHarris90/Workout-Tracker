@@ -11,8 +11,8 @@ const workoutSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    // Define the exercise property
-    exercise: [
+    // Define the exercise properties
+    exercises: [
         {
             type: {
                 type: String
