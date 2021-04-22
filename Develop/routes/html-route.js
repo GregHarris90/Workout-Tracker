@@ -1,4 +1,6 @@
 // Dependencies
 
-// Serve up stats.html & exercise.html files
+// Serve up stats.html 
+
+// Serve up exercise.html
 
