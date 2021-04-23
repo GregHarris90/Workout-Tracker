@@ -1,6 +1,8 @@
 // Dependencies
+
 // const router = require('express').Router();
 // const Workout = require('../models/Workout.js');
+
 const db = require('../models');
 
 // API Routes
@@ -56,12 +58,12 @@ module.exports = function (app) {
     // delete workout by (id) "/api/workouts/range" DELETE
     app.delete('/api/workouts', ({ body }, res) => {
         db.Workout.findByIdAndDelete(body._id)
-        .then(dbWorkout => {
-            res.json(dbWorkout);
-        })
-        .catch(err => {
-            res.status(400).json(err);
-        });
+            .then(dbWorkout => {
+                res.json(dbWorkout);
+            })
+            .catch(err => {
+                res.status(400).json(err);
+            });
     });
 
 };
