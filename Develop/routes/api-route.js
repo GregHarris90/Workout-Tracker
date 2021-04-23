@@ -11,11 +11,21 @@ router.get('/api/workouts', (req, res) => {
             res.json(dbWorkout);
         })
         .catch(err => {
-            res.json(err);
+            res.status(400).json(err);
         });
 });
 
-// add exercise "/api/workouts/" PUT (id)
+// add (update) exercise "/api/workouts/" PUT (id)
+
+router.put('/api/workouts/:id', (req, res) => {
+    Workout.updateOne({ _id: req.params.id })
+    .then(dbWorkout => {
+        res.json(dbWorkout);
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    });
+});
 
 // create workout "/api/workouts" POST
 
@@ -23,4 +33,6 @@ router.get('/api/workouts', (req, res) => {
 
 // delete workouts DELETE
 
-// export
+// export router
+
+module.export = router;
