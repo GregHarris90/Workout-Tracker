@@ -4,9 +4,10 @@
 const db = require('../models');
 
 // API Routes
-// get last workout "/api/workouts" GET
 
 module.exports = function (app) {
+
+    // get last workout "/api/workouts" GET
     app.get('/api/workouts', (req, res) => {
         db.Workout.find({})
             .then(dbWorkout => {
@@ -17,8 +18,7 @@ module.exports = function (app) {
             });
     });
 
-    // add (update) exercise "/api/workouts/" PUT (id)
-
+    // add (update) exercise by (id) "/api/workouts/" PUT
     app.put('/api/workouts/:id', ({ body }, res) => {
         db.Workout.updateOne({ _id: req.params.id })
             .then(dbWorkout => {
@@ -30,7 +30,6 @@ module.exports = function (app) {
     });
 
     // create workout "/api/workouts" POST
-
     app.post('/api/workouts', ({ body }, res) => {
         db.Workout.create(body)
             .then(dbWorkout => {
@@ -42,7 +41,6 @@ module.exports = function (app) {
     });
 
     // get workouts in range "/api/workouts/range" GET
-
     app.get('/api/workouts/range', (req, res) => {
         db.Workout.find({})
             .sort({ 'day': -1 })
@@ -53,9 +51,18 @@ module.exports = function (app) {
             .catch(err => {
                 res.status(400).json(err);
             });
-    })
-    // delete workouts DELETE
+    });
 
+    // delete workout by (id) "/api/workouts/range" DELETE
+    app.delete('/api/workouts', ({ body }, res) => {
+        db.Workout.findByIdAndDelete(body._id)
+        .then(dbWorkout => {
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.status(400).json(err);
+        });
+    });
 
 };
 // export router
