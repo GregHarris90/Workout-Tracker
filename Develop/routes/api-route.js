@@ -56,7 +56,7 @@ module.exports = function (app) {
     });
 
     // delete workout by (id) "/api/workouts/range" DELETE
-    app.delete('/api/workouts', ({ body }, res) => {
+    app.delete('/api/workouts/:id', ({ body }, res) => {
         db.Workout.findByIdAndDelete(body._id)
             .then(dbWorkout => {
                 res.json(dbWorkout);
