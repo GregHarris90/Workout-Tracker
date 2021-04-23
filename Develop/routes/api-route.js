@@ -19,15 +19,25 @@ router.get('/api/workouts', (req, res) => {
 
 router.put('/api/workouts/:id', (req, res) => {
     Workout.updateOne({ _id: req.params.id })
-    .then(dbWorkout => {
-        res.json(dbWorkout);
-    })
-    .catch(err => {
-        res.status(400).json(err);
-    });
+        .then(dbWorkout => {
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.status(400).json(err);
+        });
 });
 
 // create workout "/api/workouts" POST
+
+router.post('/api/workouts', (req, res) => {
+    Workout.create(body)
+        .then(dbWorkout => {
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.status(400).json(err);
+        });
+});
 
 // get workouts in range "/api/workouts/range" GET
 
