@@ -42,7 +42,36 @@
 *IMAGES BELOW*
 
 *Main-Page*
- <!-- insert images -->
+
+![Main-Page](https://user-images.githubusercontent.com/73864182/115949824-6d3ca600-a48c-11eb-87d9-3fc72b16e16e.png)
+
+*Main-Page (Buttons)*
+
+![Main-Page-btns](https://user-images.githubusercontent.com/73864182/115949825-6d3ca600-a48c-11eb-8b20-978cd65ddccf.png)
+
+*Select Workout Type*
+
+![AE-1](https://user-images.githubusercontent.com/73864182/115949826-6dd53c80-a48c-11eb-96ce-59ebfc25e43e.png)
+
+*Input Workout Info*
+
+![AE-2](https://user-images.githubusercontent.com/73864182/115949818-6b72e280-a48c-11eb-9787-023c184e06be.png)
+
+*Add Exercise Button*
+
+![AE-3](https://user-images.githubusercontent.com/73864182/115949819-6ca40f80-a48c-11eb-8e53-d56649bbd638.png)
+
+*Displays Last Workout*
+
+*Duration Error (undefined)*
+
+![AE-4](https://user-images.githubusercontent.com/73864182/115949820-6ca40f80-a48c-11eb-993f-c2c6a06dfe89.png)
+
+*View Workout Stats*
+
+*Duration Error (prevents display of graph/pie chart)*
+
+![AE-5](https://user-images.githubusercontent.com/73864182/115949822-6ca40f80-a48c-11eb-9483-84e5a608ed60.png)
 
 *END OF APPLICATION*
 
