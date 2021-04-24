@@ -25,9 +25,12 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
     useFindAndModify: false
 });
 
-// Routes
-app.use(require('./routes/api-route.js'));
-app.use(require('./routes/html-route.js'));
+// API & HTML Routes
+const apiRoutes = (require('./routes/api-route.js'));
+const htmlRoutes = (require('./routes/html-route.js'));
+
+app.use(apiRoutes);
+app.use(htmlRoutes);
 
 // Listen to PORT 3000
 app.listen(PORT, () => {
