@@ -1,16 +1,8 @@
 // Dependencies
-
 const router = require('express').Router();
 const Workout = require('../models/Workout.js');
 
-// const express = require('express');
-// const db = require('../models');
-// const app = express();
-
-
 // API Routes
-
-// module.exports = function (app) {
 
 // get last workout "/api/workouts" GET
 router.get('/api/workouts', (req, res) => {
@@ -69,7 +61,5 @@ router.delete('/api/workouts/:id', ({ body }, res) => {
         });
 });
 
-// };
 // export router
-
 module.exports = router;
