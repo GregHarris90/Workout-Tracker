@@ -13,6 +13,10 @@
 
 - This repository is for a web application to create, track, and update workouts. The user can then view various charts & graphs showing the input data about their workouts on a weekly basis.
 
+*LINK TO DEPLOYED APPLICATION*
+
+https://young-waters-42121.herokuapp.com/
+
 # Technology-Used
 
 - To build this project I was tasked in building the backend server, models, and routes for a Mongo Database. 
