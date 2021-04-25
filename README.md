@@ -67,11 +67,19 @@
 
 ![AE-4](https://user-images.githubusercontent.com/73864182/115949820-6ca40f80-a48c-11eb-993f-c2c6a06dfe89.png)
 
+*(UPDATE FIXED DURATION ERROR)*
+
+![AE-6](https://user-images.githubusercontent.com/73864182/115983527-7a25cc00-a556-11eb-814f-8a035f2fe25f.png)
+
 *View Workout Stats*
 
 *Duration Error (prevents display of graph/pie chart)*
 
 ![AE-5](https://user-images.githubusercontent.com/73864182/115949822-6ca40f80-a48c-11eb-9483-84e5a608ed60.png)
+
+*(UPDATE FIXED DURATION ERROR)*
+
+![AE-7](https://user-images.githubusercontent.com/73864182/115983528-7d20bc80-a556-11eb-9455-d2774632b211.png)
 
 *END OF APPLICATION*
 
@@ -83,3 +91,7 @@
 # Conclusion
 
 - Overall this assignment went fairly well. The biggest challenge was understanding the provided front-end code so that I could properly build the backend. I had some issues debugging my routes and making sure all the paths worked correctly. I had to rewrite various parts and work through the activities again to understand what I had missed. I'm currently still working on one last issue with the duration being 'undefined' and this is making one of the graphs & pie charts not work. I'm hoping to fix it in office hours tomorrow and then have a fully functional application. Thank you!
+
+*EDIT 4/24/2021*
+
+- Worked out the issue with my GET api routes to use '.aggregate' instead of '.find' for the duration, so it properly displays on the main-page with 'Last Workout' and then properly displays the 'Line Graph' and 'Pie-Chart' on the dashboard page. I also spent time today getting MongoDB Atlas setup and deploying this web application on Heroku. I'm glad I was finally able to finish everything here and get it working. Thank you!
